@@ -157,9 +157,9 @@ namespace main {
             
             
         };
-        unsigned int derivatePrivateKey(string datas, unsigned short keyType) {
+        unsigned int derivatePrivateKey(string datas, unsigned short keyType, string password) {
             
-            if (keyType == 0) { // if the public key type is a normal public key
+            if (keyType == 0) { // if the public key type is a normal sha256 public key
                 
                 
                 
@@ -167,7 +167,7 @@ namespace main {
                 
                 
                 
-            } else if (keyType == 2) { // if the public key type is a password hashed encrypted public key
+            } else if (keyType == 2) { // if the public key type is an sha256 password hashed encrypted public key
                 
                 
                 
