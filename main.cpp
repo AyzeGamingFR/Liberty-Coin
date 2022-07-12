@@ -4,7 +4,7 @@
 
 namespace main {
     
-    string config = {"blockchain": {"maxBlockSize": 0}, "networking": {"maxConnections": 128}, "wallet": {"walletPassword": "", "walletPrivateKeys": [], "walletPublicKeys": []}};
+    string config = {"blockchain": {"maxBlockSize": 0}, "networking": {"maxConnections": 32}, "wallet": {"walletPassword": "", "walletPrivateKeys": [], "walletPublicKeys": []}};
     
     unsigned int blockchain() {
         
@@ -18,6 +18,11 @@ namespace main {
             
             
         };
+        
+    };
+    unsigned int console() {
+        
+        
         
     };
     unsigned int hashing() {
@@ -70,7 +75,7 @@ namespace main {
         
         unsigned int antiAsics(string datas) {
             
-            
+            return (scrypt(sha512(sha256(x16s(x16r(x12(x11(to_string(stoi(datas) * stoi(constants[0]) * stoi(constants[1]) * stoi(constants[3]) * stoi(constants[4]) * stoi(constants[5]) * stoi(constants[6]) * stoi(constants[7])).hexdiggest()).hexdiggest()).hexdiggest()).hexdiggest()).hexdiggest()).hexdiggest()).hexdiggest()).hexdiggest());
             
         };
         
@@ -93,11 +98,22 @@ namespace main {
             
         };
         
+        unsigned int changeMaximumConnections(unsigned int ) {
+            
+            
+            
+        };
+        
         unsigned int remoteCommandsProtocol() {
             
             
             
         };
+        
+    };
+    unsigned int userInterface() {
+        
+        
         
     };
     unsigned int wallet() {
