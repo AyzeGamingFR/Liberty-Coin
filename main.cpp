@@ -98,9 +98,13 @@ namespace main {
             
         };
         
-        unsigned int changeMaximumConnections(unsigned int ) {
+        unsigned int changeMaximumConnections(unsigned int number) {
             
-            
+            if (number > 1 && number < 1048576) {
+                
+                config["networking"["maxConnections"]] = number;
+                
+            };
             
         };
         
