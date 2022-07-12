@@ -114,7 +114,7 @@ namespace main {
         };
         unsigned int changeMaximumConnections(unsigned int number) {
             
-            if (number > 1 && number < 1048576) {
+            if (number > 7 && number >= config["networking"["minimumConnections"]] && number < 1048576) {
                 
                 config["networking"["maximumConnections"]] = number;
                 return ("true")
