@@ -4,7 +4,7 @@
 
 namespace main {
     
-    string config = {"blockchain": {"maxBlockSize": 0}, "networking": {"maximumConnections": 32, "minimunConnections": 2}, "wallet": {"walletPassword": "", "walletPrivateKeys": [], "walletPublicKeys": []}};
+    string config = {"blockchain": {"maxBlockSize": 0}, "networking": {"maximumConnections": 32, "minimunConnections": 2}, "wallet": {"walletPrivateKeys": [], "walletPublicKeys": []}};
     
     unsigned int blockchain() {
         
@@ -141,14 +141,37 @@ namespace main {
     };
     unsigned int wallet() {
         
+        unsigned int unlockWallet(string datas, string password) {
+            
+            
+            
+        };
+        unsigned int lockWallet(string privateKeys, string password) {
+            
+            
+            
+        };
+        
         unsigned int generatePrivateKey() {
             
             
             
         };
-        unsigned int derivatePrivateKey(string datas) {
+        unsigned int derivatePrivateKey(string datas, unsigned short keyType) {
             
-            
+            if (keyType == 0) { // if the public key type is a normal public key
+                
+                
+                
+            } else if (keyType == 1) { // if the public key type is a password encrypted public key
+                
+                
+                
+            } else if (keyType == 2) { // if the public key type is a password hashed encrypted public key
+                
+                
+                
+            };
             
         };
         
