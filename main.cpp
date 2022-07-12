@@ -4,7 +4,7 @@
 
 namespace main {
     
-    string config = {"blockchain": {"maxBlockSize": 0}, "networking": {"maxConnections": 32}, "wallet": {"walletPassword": "", "walletPrivateKeys": [], "walletPublicKeys": []}};
+    string config = {"blockchain": {"maxBlockSize": 0}, "networking": {"maximumConnections": 32, "minimunConnections": 2}, "wallet": {"walletPassword": "", "walletPrivateKeys": [], "walletPublicKeys": []}};
     
     unsigned int blockchain() {
         
@@ -98,11 +98,30 @@ namespace main {
             
         };
         
+        unsigned int changeMinimumConnections(unsigned int number) {
+            
+            if (number > 1 && number < 16) {
+                
+                config["networking"["minimumConnections"]] = number;
+                return ("true")
+                
+            } else {
+                
+                return ("Impossible to get that much peers minimum !")
+                
+            };
+            
+        };
         unsigned int changeMaximumConnections(unsigned int number) {
             
             if (number > 1 && number < 1048576) {
                 
-                config["networking"["maxConnections"]] = number;
+                config["networking"["maximumConnections"]] = number;
+                return ("true")
+                
+            } else {
+                
+                return ("Impossible to get the much peers maximum !")
                 
             };
             
